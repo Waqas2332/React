@@ -1,10 +1,25 @@
+import MenuListItem from "./MenuListItem";
+
 function MenuList() {
+  const items = [
+    {
+      id: "01",
+      title: "List Item # 1",
+    },
+    {
+      id: "02",
+      title: "List Item # 2",
+    },
+    {
+      id: "03",
+      title: "List Item # 3",
+    },
+  ];
   return (
     <ul>
-      <li>List Item 1</li>
-      <li>List Item 2</li>
-      <li>List Item 3</li>
-      <li>List Item 4</li>
+      {items.map((item) => (
+        <MenuListItem title={item.title} key={item.id} />
+      ))}
     </ul>
   );
 }
