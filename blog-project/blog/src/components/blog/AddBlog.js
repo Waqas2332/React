@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./AddBlog.css";
-const AddBlog = () => {
+const AddBlog = (props) => {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
 
@@ -17,9 +17,9 @@ const AddBlog = () => {
       name: name,
       content: content,
     };
-    console.log(blogData);
     setName("");
     setContent("");
+    props.onSave(blogData);
   }
   return (
     <form onSubmit={formSubmitHandler}>
