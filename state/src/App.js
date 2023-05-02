@@ -1,25 +1,17 @@
-import React from "react";
-import Blog from "./components/blog/Blog";
-// React Hooks
-// function App() {
-//   const [number, setNumber] = useState(0);
-//   function incrementHandler() {
-//     setNumber((prevState) => {
-//       return (prevState = prevState + 1);
-//     });
-//   }
-//   return (
-//     <div>
-//       <Counter data={number} />
-//       <button onClick={incrementHandler}>Increment</button>
-//     </div>
-//   );
-// }
+import React, { useState } from "react";
+import Counter from "./components/Counter";
 
 function App() {
+  const [number, setNumber] = useState(null);
+  const handleChange = (event) => {
+    setNumber(event.target.value);
+  };
   return (
     <div>
-      <Blog />
+      <form>
+        <input onChange={handleChange} />
+      </form>
+      <Counter data={number} />
     </div>
   );
 }
