@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-const Blog = () => {
+import "./AddBlog.css";
+const AddBlog = () => {
   const [name, setName] = useState("");
   const [content, setContent] = useState("");
 
@@ -22,21 +23,26 @@ const Blog = () => {
   }
   return (
     <form onSubmit={formSubmitHandler}>
+      <label>Name</label>
       <input
         type="text"
         placeholder="Enter Name"
         onChange={nameChangeHandler}
         value={name}
       />
-      <input
+      <label>Content</label>
+      <textarea
         type="text"
         placeholder="Content"
         onChange={contentChangeHandler}
         value={content}
-      />
+        cols={50}
+        rows={6}
+      ></textarea>
+
       <button>Submit</button>
     </form>
   );
 };
 
-export default Blog;
+export default AddBlog;
