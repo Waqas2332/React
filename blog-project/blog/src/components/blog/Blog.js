@@ -1,19 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import AddBlog from "./AddBlog";
 import AllBlogs from "./AllBlogs";
-const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
-  function blogData(blog) {
-    const blogData = { ...blog, id: Math.random() };
-    setBlogs((prevState) => {
-      return [...prevState, blogData];
-    });
-    console.log(blogs);
-  }
+const Blog = (props) => {
   return (
     <div>
-      <AddBlog onSave={blogData} />
-      <AllBlogs />
+      <AddBlog onSave={props.onSave} />
+      <AllBlogs blogs={props.blogs} />
     </div>
   );
 };

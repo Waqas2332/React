@@ -1,0 +1,29 @@
+.blogs-list {
+  margin-top: 10rem;
+  margin-left: 20rem;
+}
+.blogs-list h2 {
+  margin-bottom: 30px;
+}
+.blogs-list li {
+  width: 50%;
+  border: 2px solid black;
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 40px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  min-height: fit-content;
+  padding-right: 40px;
+  text-align: center;
+}
+.blogs-list li h3 {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+.blogs-list li p {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
